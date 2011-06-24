@@ -1,0 +1,25 @@
+group = 'com.jabaddon.scala'
+version = 1.0
+
+apply plugin: 'scala'
+
+scalaVersion = '2.7.7'
+junitVersion = '4.8.1'
+
+repositories {
+    mavenCentral()
+    mavenRepo(urls: 'http://www.ibiblio.org/maven2/')
+    mavenRepo(urls: 'http://scala-tools.org/repo-releases/')
+    //mavenRepo(urls: 'http://www.scala-tools.org/repo-releases/')
+}
+
+dependencies {
+    // Libraries needed to run the scala tools
+    scalaTools 'org.scala-lang:scala-compiler:2.8.1.RC4'
+    scalaTools 'org.scala-lang:scala-library:2.8.1.RC4'
+
+    compile 'org.scala-lang:scala-library:2.8.1.RC4'
+    
+    testCompile 'junit:junit:4.8.2'
+    //test 'org.scalatest:scalatest:1.0'
+}
