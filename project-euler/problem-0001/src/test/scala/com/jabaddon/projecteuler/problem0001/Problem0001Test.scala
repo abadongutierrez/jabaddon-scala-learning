@@ -22,7 +22,7 @@ class Problem0001Test {
     
     @Test
     def testProblem0001Solution() {
-        val multiples3Or5 = (1 to (1000 - 1)).toList.filter(a => a % 3 == 0 || a % 5 == 0)
-        assertThat(multiples3Or5.reduce((a, b) => a + b), is(233168))
+        val multiples3Or5Below1000 = (1 to (1000 - 1)).toList.filter(a => a % 3 == 0 || a % 5 == 0)
+        assertThat(multiples3Or5Below1000.reduce((a, b) => a + b), is(233168))
     }
 }
